@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add New Student</h1>
+<form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <!-- <input type="text" name="name" placeholder="Student Name" value='{{student.name}}' required/>
+    <input type="number" name="age" placeholder="Age" value='{{student.age}}' required/>
+    <input type="text" name="course" placeholder="Course" value='{{student.course}}' required/>
+    <input type="number" name="marks" placeholder="Marks" value='{{student.marks}}'required/> -->
+
+    <button type="submit" class="btn">Update</button>
+    <a href="{% url 'students-page' %}" class="btn">Cancel</a>
+</form>
+
+{% endblock %}

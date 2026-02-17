@@ -1,0 +1,159 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#121212;   /* Gray background */
+    color:#e4e7e9;
+}
+
+.navbar{
+    background:#075e54;
+    color:rgb(225, 234, 234);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+.navbar a{
+    color:rgb(234, 226, 226);
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+    transition:transform 0.18s ease, text-shadow 0.18s ease;
+}
+
+.navbar a:hover{
+    transform:scale(1.15);
+    text-shadow:0 0 8px rgba(221, 232, 226, 0.845);
+}
+
+.container{
+    padding:50px;
+}
+
+.hero{
+    background:#191919;
+    color:#e2e8ec;
+    padding:60px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 28px;
+    background:#25d366;
+    color:white;
+    border:none;
+    border-radius:18px;
+    text-decoration:none;
+    cursor:pointer;
+    transition:transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 18px rgba(0,0,0,0.35);
+}
+
+.btn:active{
+    transform:scale(0.96);
+}
+
+.table{
+    width:100%;
+    background:rgb(15, 14, 14);
+    color:#d0d7dc;
+    border-collapse:collapse;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.table th{
+    background:#e7fce9;
+    color:#075e54;
+}
+
+.table th, .table td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.form input{
+    display:block;
+    width:300px;
+    padding:12px;
+    margin:10px 0;
+    background:white;
+    color:#111b21;
+    border:1px solid #ccc;
+}
+
+.footer{
+    text-align:center;
+    background:#075e54;
+    color:white;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* TABLE ALIGNMENT */
+.table th:nth-child(1),
+.table td:nth-child(1){
+    text-align:center;
+    width:80px;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2){
+    text-align:left;
+    padding-left:25px;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3),
+.table th:nth-child(4),
+.table td:nth-child(4),
+.table th:nth-child(5),
+.table td:nth-child(5){
+    text-align:center;
+}
+
+.table th:nth-child(6),
+.table td:nth-child(6){
+    text-align:center;
+}
+
+/* ===== ICON ACTION BUTTONS ===== */
+
+.icon-btn{
+    background:none;
+    border:none;
+    font-size:18px;
+    padding:8px;
+    margin:0 4px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+/* edit icon */
+.icon-btn.edit{
+    color:#25d366;
+}
+.icon-btn.edit:hover{
+    background:rgba(37,211,102,0.15);
+    transform:scale(1.2);
+}
+
+/* delete icon */
+.icon-btn.delete{
+    color:#ff4d4d;
+}
+.icon-btn.delete:hover{
+    background:rgba(255,77,77,0.15);
+    transform:scale(1.2);
+}
+
