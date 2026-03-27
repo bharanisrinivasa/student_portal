@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Student
 from .form import StudentForm
 from django.contrib.auth.forms import AuthenticationForm,UserCreationForm,PasswordChangeForm
@@ -7,6 +7,8 @@ from django.contrib.auth import authenticate, login, logout, update_session_auth
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 
+from rest_framework.decorators import api_view
+from .serialization import StudentSerializer
 # Create your views here.
 # def home(request):
 #     return HttpResponse("Welcome to Students Portal!")
@@ -149,3 +151,22 @@ def change_password(request):
         form = PasswordChangeForm(request.user)
     return render(request,'change_password.html',{'form':form})
         
+def student_api(request):
+    students = Student.objects.all()
+    serializer = StudentSerializer(students, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+@api_view(['PUT'])
+def update_student_api(request, id):
+    student = Student.objects.get(id)
+    serializer = StudentSerializer(student, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse(serializer.data)
+    return JsonResponse(serializer.errors, status=400)
+
+@api_view(['DELETE'])
+def delete_student_api(request, id):
+    student = Student.objects.get(id)
+    student.delete()
+    return JsonResponse({'message': 'Student deleted successfully'}, status=204)
