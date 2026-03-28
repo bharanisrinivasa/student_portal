@@ -1,13 +1,16 @@
 body{
     margin:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#121212;   /* Gray background */
+    background: url('../student_bg_dark.png') no-repeat center center fixed;
+    background-size: cover;
     color:#e4e7e9;
 }
 
 .navbar{
-    background:#075e54;
-    color:rgb(225, 234, 234);
+    background: rgba(10, 25, 55, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color:rgb(240, 248, 255);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -25,7 +28,7 @@ body{
 
 .navbar a:hover{
     transform:scale(1.15);
-    text-shadow:0 0 8px rgba(221, 232, 226, 0.845);
+    text-shadow:0 0 8px rgba(100, 180, 255, 0.845);
 }
 
 .container{
@@ -33,19 +36,22 @@ body{
 }
 
 .hero{
-    background:#191919;
+    background: rgba(15, 25, 50, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color:#e2e8ec;
     padding:60px;
     text-align:center;
     border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
 }
 
 .btn{
     display:inline-block;
     margin-top:20px;
     padding:12px 28px;
-    background:#25d366;
+    background:#3b82f6;
     color:white;
     border:none;
     border-radius:18px;
@@ -65,20 +71,24 @@ body{
 
 .table{
     width:100%;
-    background:rgb(15, 14, 14);
+    background: rgba(15, 20, 35, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color:#d0d7dc;
     border-collapse:collapse;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
 }
 
 .table th{
-    background:#e7fce9;
-    color:#075e54;
+    background: rgba(30, 58, 138, 0.9);
+    color:#e0f2fe;
 }
 
 .table th, .table td{
     padding:15px;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
 }
 
 .form input{
@@ -86,14 +96,21 @@ body{
     width:300px;
     padding:12px;
     margin:10px 0;
-    background:white;
-    color:#111b21;
-    border:1px solid #ccc;
+    background:rgba(15, 25, 50, 0.6);
+    color:#e0f2fe;
+    border:1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+.form input:focus{
+    outline:none;
+    border-color:#3b82f6;
 }
 
 .footer{
     text-align:center;
-    background:#075e54;
+    background: rgba(10, 25, 55, 0.9);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     color:white;
     padding:20px;
     margin-top:50px;
@@ -141,10 +158,10 @@ body{
 
 /* edit icon */
 .icon-btn.edit{
-    color:#25d366;
+    color:#3b82f6;
 }
 .icon-btn.edit:hover{
-    background:rgba(37,211,102,0.15);
+    background:rgba(59,130,246,0.15);
     transform:scale(1.2);
 }
 

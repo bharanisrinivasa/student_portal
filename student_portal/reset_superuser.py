@@ -6,7 +6,7 @@ django.setup()
 from django.contrib.auth import get_user_model
 
 username = 'bharani'
-password = 'Srinivas12306569'
+password = 'srinivas@6569'
 
 User = get_user_model()
 user = User.objects.filter(username=username).first()
